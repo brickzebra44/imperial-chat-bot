@@ -1,7 +1,6 @@
 const mineflayer = require('mineflayer')
 const bot = require('fs');
 
-
 var keyword = "!";
 var delaySpam = 1600;
 var messages = ["Imperials own this server.", "> Hail the Imperial Empire", "Imperial are always right", "Join the Imperials or be a normie", "Imperials on /ftop", "All groups are controled by the Imperials"]
@@ -34,20 +33,32 @@ var keyWordOnce = false;
 var moveinterval = 2; // 2 second movement interval
 var maxrandom = 5; // 0-5 seconds added to movement interval (randomly)
 
-// DISCORD
+//DISCORD
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-});
-client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('pong');
-  }
+client.on('Imps', () => {
+
+    console.log('Imps on top!');
+
 });
 
-client.login('NTE3MDY5MDk0MzQ0OTgyNTQ4.W_2kHg.Gkkt9jTjf-j9f_y9Vg2nTaX6CKg');
+ 
+
+client.on('message', message => {
+
+    if (message.content === 'ping') {
+
+       message.reply('pong');
+
+       }
+
+});
+
+
+
+client.login(process.env.NTE3MDY5MDk0MzQ0OTgyNTQ4.W_2kHg.GjqeHdkUw2dyVZIhR3Q59vusV7g);
 
 client.on('message', msg => {
     if (msg.author.id != client.user.id)
