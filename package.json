@@ -6,11 +6,11 @@
 
   "version": "0.0.0",
 
-  "main": "bot.js",
+  "main": "ImperialBot.js",
 
   "scripts": {
 
-    "start": "node bot.js"
+    "start": "node ImperialBot.js"
 
   },
 
